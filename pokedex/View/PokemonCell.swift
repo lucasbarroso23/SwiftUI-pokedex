@@ -11,7 +11,6 @@ import Kingfisher
 @available(iOS 14.0, *)
 struct PokemonCell: View {
     let pokemon: Pokemon
-    let viewModel: PokemonViewModel
     
     var body: some View {
         ZStack {
@@ -43,9 +42,11 @@ struct PokemonCell: View {
                 }
             }
         }
-        .background(Color(viewModel.backgroundColor(forType: pokemon.type)))
+        .background(Color(PokemonViewModel.backgroundColor(forType: pokemon.type)))
         .cornerRadius(12)
-        .shadow(color: Color(viewModel.backgroundColor(forType: pokemon.type)), radius: 6, x: 0.0, y: 0.0)
+        .shadow(color: Color(PokemonViewModel.backgroundColor(forType: pokemon.type)), radius: 6, x: 0.0, y: 0.0)
+        
     }
+    
 }
 

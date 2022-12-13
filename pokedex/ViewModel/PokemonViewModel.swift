@@ -28,7 +28,7 @@ class PokemonViewModel: ObservableObject {
         }.resume()
     }
     
-    func backgroundColor(forType type: String) -> UIColor {
+    static public func backgroundColor(forType type: String) -> UIColor {
         switch type {
         case "fire": return .systemRed
         case "poison": return .systemGreen
